@@ -247,7 +247,8 @@ public function resolveForDisplay($resource, ?string $attribute = null): void
      * @param string $attribute
      * @return array|mixed
      */
-    public function resolve($resource, $attribute = null)
+public function resolve($resource, ?string $attribute = null): void
+
     {
         foreach ($this->meta['fields'] as $field) {
             $field->resolve($resource, $attribute);
